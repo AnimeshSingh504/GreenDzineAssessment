@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ImHome } from "react-icons/im";
 import { RiUserFill } from "react-icons/ri";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
 
-  const [activeIcon,setActiveIcon] = useState("");
-
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const [activeIcon,setActiveIcon] = useState('dashboard');
+
+  useEffect(() => {
+    if (location.pathname === '/dashboard') {
+      setActiveIcon('dashboard');
+    } else if (location.pathname === '/details') {
+      setActiveIcon('employee');
+    }
+  }, [location.pathname]);
+
+  
 
   const moveToDashboard = () => {
     setActiveIcon("dashboard");

@@ -246,7 +246,7 @@
     width: 100vw;
     flex-direction: column;
     position: fixed;
-    top: 6em;
+    top: 8.5em;
 }
 
 .productivity-back{
@@ -549,7 +549,7 @@
 }
 
 .holder-container{
-    height: calc(100vh * 0.5);
+    height: calc(calc(100vh * 0.5) + 5em);
     overflow:scroll;
     width: 100vw;
     overflow-x: hidden;
