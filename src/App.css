@@ -44,6 +44,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: -2em;
 }
 
 .formDesign{
@@ -181,7 +183,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .empDashboardback{
@@ -244,8 +245,8 @@
     align-items: center;
     width: 100vw;
     flex-direction: column;
-    top: -2.8em;
-    position: relative;
+    position: fixed;
+    top: 6em;
 }
 
 .productivity-back{
@@ -259,7 +260,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 1.5em;
+    top: 1.8em;
     z-index: 10;
 }
 
@@ -277,7 +278,7 @@
 
 .progress-container{
     width: 328px;
-    height: 465px;
+    height: auto;
     background-color: #5E5E5E82;
     box-shadow: inset 0px 4px 0px #00000040;
     mix-blend-mode: normal;
@@ -286,9 +287,10 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1.4em;
     padding-top: 2.8em;
     z-index: 3;
+    padding-bottom: 2em;
 }
 
 .data-container{
@@ -365,8 +367,8 @@
 }
 
 .top-img{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     mix-blend-mode: normal;
     opacity: 1;
 }
@@ -376,10 +378,12 @@
 }
 
 .bottom-img{
-    width: 71px;
+    width: 70px;
     height: 70px;
     mix-blend-mode: normal;
     opacity: 1;
+    position: relative;
+    top: -1em;
 }
 
 .above-four{
@@ -396,8 +400,8 @@
     align-items: center;
     border-radius: 50%;
     position: relative;
-    top: -6em;
-    left: 3em;
+    top: -6.5em;
+    left: 4em;
 }
 
 .above-text{
@@ -505,9 +509,17 @@
 
 .dataholder{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.even{
+    margin-left: 0.8em;
+}
+
+.odd{
+    margin-left:2.2em;
 }
 
 .rightno{
@@ -530,14 +542,23 @@
     color: white;
 }
 
+.empMain{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
 .holder-container{
-    height: 22em;
+    height: calc(100vh * 0.5);
     overflow:scroll;
-    width: 298px;
+    width: 100vw;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 2.9em;
+    align-items: flex-start;
+    position: relative;
+    bottom: 2.5em;
 }
 
 .search-top{
@@ -545,6 +566,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 1.8em;
 }
 
 .search-bar{
@@ -602,6 +625,71 @@
   *:hover::-webkit-scrollbar-thumb {
     visibility: visible;
   }
+
+  .footer-top{
+    /* position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 3em;
+    width: 100vw;
+    display: flex;
+    background: transparent linear-gradient(262deg, #0F2323 0%, #0F2323 40%) 0% 0% no-repeat padding-box;
+    position: fixed;
+    bottom: 0.4em;
+    border-radius: 20px;
+}
+
+  /* .footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 335px;
+    height: 50px;
+    background: transparent linear-gradient(262deg, #0F2323 0%, #0F2323 40%) 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+} */
+
+.btnn{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw/2);
+}
+
+.left-btn{
+    background-color: white;
+    filter: blur(1.8px);
+    opacity: 0.2;
+}
+
+.right-btn{
+    background-color: white;
+    filter: blur(1.8px);
+    opacity: 0.2;
+}
+
+.dashboard-top{
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-marker{
+    height: 50px;
+    width: 165px;
+    background-color: #FFFFFFB3;
+    filter: blur(1px);
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+
 
 
 

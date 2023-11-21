@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { LOGIN_VAL } from '../data/loginCredientials/loginData';
+import toast, {Toaster} from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
+
+    const navigate = useNavigate();
 
     const [formdata,setformdata] = useState({
         username: "", password : ""
@@ -16,20 +20,32 @@ export const LoginForm = () => {
         ))
     };
 
+    const success = () => {
+        toast.success("Login Successful");
+        setTimeout(() => {
+            navigate('/dashboard');
+        },2000);
+    }
+
+    const decline = () => {
+        toast.error("Username or password is wrong");
+    }
+
     // things need to be done
     const handleOnSubmit = (event) => {
         event.preventDefault();
         if(formdata.username === LOGIN_VAL.userName && formdata.password === LOGIN_VAL.password){
-
+            success();
         }
         else{
-            
+            decline();
         }
     }
 
 
   return (
     <div>
+        <Toaster/>
         <form onSubmit={handleOnSubmit}
             className="formDesign">
             <input

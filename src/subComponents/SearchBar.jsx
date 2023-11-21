@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoIosSearch } from "react-icons/io";
 
-export const SearchBar = () => {
+export const SearchBar = (props) => {
+
+    const setuserData = props.setuserData;
 
     const [formdata,setformdata] = useState({
         searchEmp : ""
@@ -16,10 +18,16 @@ export const SearchBar = () => {
         ))
     };
 
+    useEffect(() => {
+        setuserData(formdata.searchEmp);
+    },[formdata.searchEmp])
+
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log(formdata.searchEmp);
+        // console.log(formdata.searchEmp);
+        setuserData(formdata.searchEmp);
     }
+    
 
   return (
     <div className='search-top'>
@@ -31,7 +39,7 @@ export const SearchBar = () => {
                 type='text'
                 placeholder='Search with name'
                 name="searchEmp"
-                value={FormData.empName}
+                value={formdata.empName}
                 onChange={handleOnChange}
                 className='search-bar'
             />
