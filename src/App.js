@@ -8,7 +8,9 @@ function App() {
 
   return (
     <div className='main'>
-      <div className='name'>This is greenDzine project</div>
+
+      <div className='name'>My name is Animesh</div>
+      
       <Routes>
 
         <Route path='/' element={<LoginPage/>}/>

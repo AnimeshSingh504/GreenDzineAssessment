@@ -10,6 +10,11 @@
     background: linear-gradient(to bottom, #000000, #000E09);
 }
 
+.name{
+    color: white;
+    font-size: 2rem;
+}
+
 .topLogo{
     padding-top: 160px;
     display: flex;
