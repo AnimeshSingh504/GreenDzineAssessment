@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div className='main'>
+      <div className='name'>This is greenDzine project</div>
       <Routes>
 
         <Route path='/' element={<LoginPage/>}/>

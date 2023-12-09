@@ -276,6 +276,11 @@
     font: normal normal bold 18px/25px;
 }
 
+.name{
+    color: white;
+    font-size: 1rem;
+}
+
 .progress-container{
     width: 328px;
     height: auto;
@@ -324,7 +329,7 @@
     background-color: #36A54680;
     border-style: solid;
     border-radius: 18px;
-    border-color: rgb(77, 222, 67);
+    border-color: white;
     border-width: 3px;
 }
 
